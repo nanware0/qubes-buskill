@@ -1,0 +1,28 @@
+[build-section]
+requires = ["setuptools>=84.0.0", "wheel>=0.48.0", "mypy>=2.4.0"]
+build-backend = "backend"
+backend-path = ["."]
+
+[project]
+name = "qubes-buskill"
+version = "0.0.30"
+
+description = "Qubes OS Buskill's python package."
+readme = "README.md"
+
+authors = [{name = "Nanware", email = "nanware@pm.me"}]
+maintainers = [{name = "Nanware", email = "nanware@pm.me"}]
+
+requires-python = ">=3.13.9"
+dependencies = [
+    "numpy>=2.5.4",
+    "sounddevice>=0.5.6",
+    "qubesadmin @ git+https://github.com/QubesOS/qubes-core-admin-client.git@v4.4.2"
+]
+
+[project.urls]
+BusKill = "https://www.buskill.in"
+QubesOS = "https://www.qubes-os.org"
+
+[tool.setuptools.package-data]
+buskill = ["*.pyi", "py.typed"]
