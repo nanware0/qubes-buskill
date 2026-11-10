@@ -80,7 +80,7 @@ This repository is a python package, so to install it, you'll need to use `pip`,
 
 ### Roadmap and advancement
 
-You can see a roadmap and the advancement specific to this repository in the file [advancement.md](./roadmap.md). For the whole project, you'll get it in the [documentation repository](https://github.com/nanware0/qubes-buskill-doc/).
+You can see a roadmap and the advancement specific to this repository in the file [advancement.md](./advancement.md). For the whole project, you'll get it in the [documentation repository](https://github.com/nanware0/qubes-buskill-doc/).
 
 ### Statistics
 
