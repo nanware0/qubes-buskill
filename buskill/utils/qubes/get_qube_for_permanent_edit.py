@@ -1,7 +1,4 @@
-# The package policy is that every step must be commented 
-# and that documenting the code is an obligation, 
-# don't be afraid by the comments,
-# they're here to specify the expected behavior
+# For the comments, see specification.md in the root of the project.
 
 # qubesadmin imports
 import qubesadmin # pyright: ignore[reportMissingTypeStubs]

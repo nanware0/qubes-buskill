@@ -11,7 +11,7 @@ import os
 from buskill.utils.qrexec import generate_policy
 
 def write_policy(armed_qubes: set[str]) -> None:
-    policy_path: Path = Path('/etc/qubes/policy.d/30-buskill.policy')
+    policy_path: Path = Path('/etc/qubes/policy.d/80-buskill.policy')
     if policy_path.is_dir():
         shutil.rmtree(policy_path)
 

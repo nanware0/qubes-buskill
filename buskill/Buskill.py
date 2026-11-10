@@ -63,6 +63,8 @@ class Buskill():
             CONFIG_MANAGER.save()
 
     def _setup_fallback(self: Self) -> None:
+        if CONFIG_MANAGER.action.fallback.delay == 0: 
+            return
         fallback: Callable[..., Any]
         args: list[bool] = []
 

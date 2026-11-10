@@ -11,9 +11,16 @@ from pathlib import Path
 from buskill.utils.logger import Verbose, LogType, Color
 
 class Logger():
+    '''
+    A basic logger that contains the type of the logs and their timestamp, and is able to save them.  
+    It is not finished yet.
+    '''
     log_dir: Path = Path('/var/lib/qubes-buskill')
     
     def __init__(self: Self, verbose: Verbose, log_history_len: int = 2000) -> None:
+        '''
+        Initialize the logger and configure the level of verbose of the logs, and the number of logs saved.
+        '''
         self.logs: list[tuple[datetime, Verbose, LogType, str]] = []
         self.verbose: Verbose = verbose
         if log_history_len <= 0:
@@ -21,6 +28,7 @@ class Logger():
         else: self.log_history_len: int = log_history_len
 
     def log(self: Self, log: str, log_verbose: Verbose, type: LogType = LogType.LOG) -> None:
+        '''Print a log and save it'''
         if self.verbose.value >= log_verbose.value:
             date: datetime = datetime.now()
             if type == LogType.LOG:
@@ -36,4 +44,6 @@ class Logger():
                 self.logs = self.logs[-self.log_history_len:]
             self.logs.append((date, log_verbose, type, log))
 
-    def save(self: Self) -> None: ...
+    def save(self: Self) -> None:
+        '''Not implemented yet'''
+        ...
