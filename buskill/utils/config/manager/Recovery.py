@@ -229,6 +229,16 @@ class RecoveryManager(Manager):
         self._config['contact'] = contact
         self.contact.load_config(self._config['contact'])
 
+    def enable(self: Self) -> None:
+        self._config['enabled'] = True
+
+    def disable(self: Self) -> None:
+        self._config['enabled'] = False
+
+    @property
+    def enabled(self: Self) -> bool:
+        return self._config['enabled']
+
     @property
     def message(self: Self) -> str:
         return self._config['message']
@@ -236,18 +246,19 @@ class RecoveryManager(Manager):
     @property
     def get(self: Self) -> RecoveryConfig:
         return self._config
-
     @property
     def encoded(self: Self) -> EncodedRecoveryConfig:
         return {
             'identity': self.identity.encoded,
             'contact': self.contact.encoded,
-            'message': self.message
+            'message': self.message,
+            'enabled': self.enabled
         }
 
     def decode(self: Self, encoded_config: EncodedRecoveryConfig) -> RecoveryConfig:
         return {
             'identity': self.identity.decode(encoded_config['identity']),
             'contact': self.contact.decode(encoded_config['contact']),
-            'message': encoded_config['message']
+            'message': encoded_config['message'],
+            'enabled': encoded_config['enabled']
         }

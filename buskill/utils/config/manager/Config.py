@@ -65,7 +65,8 @@ class ConfigManager(Manager):
                 'family_name': '',
                 'date_of_birth': None
             },
-            'message': ''
+            'message': '',
+            'enabled': False
         },
         'system_config': {
             'auto_save': True,

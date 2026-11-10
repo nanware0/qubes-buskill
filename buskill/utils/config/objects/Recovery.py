@@ -21,6 +21,7 @@ class RecoveryConfig(TypedConfig):
     identity: Identity
     contact: Contact
     message: str
+    enabled: bool
 
 class EncodedDate(TypedDict):
     day: int
@@ -41,3 +42,4 @@ class EncodedRecoveryConfig(EncodedTypedConfig):
     identity: EncodedIdentity
     contact: EncodedContact
     message: str
+    enabled: bool
