@@ -12,10 +12,10 @@ BusKill is a Dead Man Switch triggered when a magnetic breakaway is tripped, sev
 
 ### What's the utility of this package?
 
-For a long time, BusKill had no package for Qubes OS, and users had to manually configure BusKill by copying shell scripts, and this solution wasn't really flexible. Actually, there is [an other BusKill contrib package](https://github.com/BusKill/buskill-qubes-contrib/), officially supported by the BusKill team, but this is a minimal package with basic functionnalities. It's good, but doesn't support multiple USB qubes or dom0 as a USB Qube (don't do that but still), and you might want to get your laptop back if he's stole, and not just destroy your data or shutdown your laptop. Also, this other package use shell, which is not a very good solution for long term packages.  
+For a long time, BusKill had no package for Qubes OS, and users had to manually configure BusKill by copying shell scripts, and this solution wasn't really flexible. Actually, there is [an other BusKill contrib package](https://github.com/BusKill/buskill-qubes-contrib/), officially supported by the BusKill team, but this is a minimal package with basic functionalities. It's good, but doesn't support multiple USB qubes or dom0 as a USB Qube (don't do that but still), and you might want to get your laptop back if he's stole, and not just destroy your data or shutdown your laptop. Also, this other package use shell, which is not a very good solution for long term packages.  
 These are the reasons why this package exist: to provide a more complete package that will have more usecases.
 
-## What are the functionnalities?
+## What are the functionalities?
 
 ### Shutdown
 
@@ -44,7 +44,7 @@ But don't worry: all these methods are really expensive and not sure to success 
 
 ### Lock screen
 
-This will lock your screen so the attackers cannot easily access your computer. This will not protect you against an attacker with determination and sufficiant time.
+This will lock your screen so the attackers cannot easily access your computer. This will not protect you against an attacker with determination and sufficient time.
 
 ### Alarm
 
@@ -52,12 +52,12 @@ This will lock the screen but also activate an alarm (using a [sawtooth wave](ht
 
 ### Fallback
 
-When locking your screen or activating an alarm, you might want to also protect your data, that's the reason the fallback system exists: it allows you to setup a fallback for the functionnalities that doesn't shutdown/reboot your computer (aka lock screen and alarm), so that if you weren't able to get your laptop back, one of the data protection functionnalities will be activated and your data will be protected.
+When locking your screen or activating an alarm, you might want to also protect your data, that's the reason the fallback system exists: it allows you to setup a fallback for the functionalities that doesn't shutdown/reboot your computer (aka lock screen and alarm), so that if you weren't able to get your laptop back, one of the data protection functionalities will be activated and your data will be protected.
 
 ### "Recover"
 
-*This functionnality is not a data recovery functionnality.*  
-It is intended to display a custom screen with the information that the user gave. It is optionnal, and works with the lock screen and the alarm functionnalities.
+*This functionality is not a data recovery functionality.*  
+It is intended to display a custom screen with the information that the user gave. It is optionnal, and works with the lock screen and the alarm functionalities.
 > It has not been implemented yet.
 
 ## License
