@@ -35,7 +35,7 @@ These are the reasons why this package exist: to provide a more complete package
 
 ### Self-destruct
 
-It erases the LUKS headers of every LUKS devices found, then suspend LUKS, and finally hard shutdown.
+It overwrites the LUKS headers of every LUKS devices found, then suspend LUKS, and finally hard shutdown.
 
 **What are the effects?**  
 The data are made inaccessible, so you cannot recover them.
@@ -95,12 +95,12 @@ Using `cloc --exclude-dir=venv,env,.venv,__pycache__,.git,.pytest_cache,.egg-inf
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Python                          47            437            268           1670
-Markdown                         4             61              0            115
+Python                          47            439            268           1682
+Markdown                         4             62              0            121
 TOML                             1              6              0             22
 Text                             1              1              0              7
 -------------------------------------------------------------------------------
-SUM:                            53            505            268           1814
+SUM:                            53            508            268           1832
 -------------------------------------------------------------------------------
 ```
 
