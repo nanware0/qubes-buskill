@@ -2,13 +2,19 @@
 
 > This project isn't finished yet, and the core is in documentation and [specification](./specification.md) process. Also, some module aren't finished at all or need modifications.
 
+[![License](https://shields.io/badge/License-GPL--3.0+_&_CC--BY--SA_v4.0-darkgreen)](#license)
+[![Target](https://img.shields.io/badge/Target-Qubes_OS-blue)](https://qubes-os.org/)
+[![See also](https://img.shields.io/badge/See_also-BusKill-red)](https://buskill.in)
+[![Author](https://shields.io/badge/Author-Nanware-111)](https://github.com/nanware0/hello-world/) 
+[![Maintainer](https://shields.io/badge/Maintainer-Nanware-111)](https://github.com/nanware0/hello-world/)
+
 ## Short presentation
 
 This repository stores the python package that contains the core logic of a BusKill package for Qubes OS.  
 
 ### What's BusKill?
 
-BusKill is a Dead Man Switch triggered when a magnetic breakaway is tripped, severing a USB connection. And using some software, we are able to activate some actions when BusKill is triggered. BusKill hardware is licensed under CC-BY-SA, so it's open source. For more information, go to the [BusKill website](https://www.buskill.in/).
+BusKill is a Dead Man Switch triggered when a magnetic breakaway is tripped, severing a USB connection. And using some software, we are able to activate some actions when BusKill is triggered. BusKill is licensed under CC-BY-SA, so it's open source. For more information, go to the [BusKill website](https://www.buskill.in/).
 
 ### What's the utility of this package?
 

@@ -30,8 +30,9 @@ The core logic, this includes :
 
 ## Roadmap
 
-- Fix some little issues everywhere.
 - Finish the logger.
 - Remove numpy and sounddevice dependencies by using direct pipewire's sockets.
 - Add support for a sys-audio configuration (flexible support).
+- Add logs.
+- Create documentation and specification.
 - Create the recovery module.
