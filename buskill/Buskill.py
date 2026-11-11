@@ -21,10 +21,15 @@ from buskill.utils.qrexec import write_policy
 import asyncio
 from asyncio import AbstractEventLoop, Future
 
+# threading imports
+from threading import Thread
+
 class Buskill():
     def __init__(self: Self) -> None:
         CONFIG_MANAGER.set_apply_func(self.apply)
         self.loop: AbstractEventLoop = asyncio.new_event_loop()
+        thread: Thread = Thread(target=self.loop.run_forever, daemon=True)
+        thread.start()
         self.alarm: AlarmGenerator = AlarmGenerator(
             freq_low=CONFIG_MANAGER.alarm.freq_low,
             freq_high=CONFIG_MANAGER.alarm.freq_high,
@@ -101,5 +106,5 @@ class Buskill():
         elif CONFIG_MANAGER.action.action == Action.SHUTDOWN:
             shutdown(CONFIG_MANAGER.action.hard)
         else:
-            if self.loop.run_until_complete(self_destruct()) == False:
+            if asyncio.run(self_destruct()) == False:
                 shutdown(CONFIG_MANAGER.action.hard)
