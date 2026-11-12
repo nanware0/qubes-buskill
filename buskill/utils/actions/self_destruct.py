@@ -94,7 +94,7 @@ async def self_destruct() -> bool | None:
                     writes.append(loop.run_in_executor(None, write_random, luksEndByte, device))
         except: pass
 
-    await asyncio.gather(*writes)
+    await asyncio.gather(*writes, return_exceptions=True)
     writes.clear()
     subprocess.run([SYNC])
     subprocess.run([BASH, '-c', f'{ECHO} 3 > /proc/sys/vm/drop_caches'])

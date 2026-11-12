@@ -30,7 +30,7 @@ The core logic, this includes :
 
 ## Roadmap
 
-- Finish the logger.
+- ~~Finish the logger (minimal version).~~
 - Remove numpy and sounddevice dependencies by using direct pipewire's sockets.
 - Add support for a sys-audio configuration (flexible support).
 - Add logs.
