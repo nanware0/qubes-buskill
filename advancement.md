@@ -31,7 +31,8 @@ The core logic, this includes :
 ## Roadmap
 
 - ~~Finish the logger (minimal version).~~
-- Remove numpy and sounddevice dependencies by using direct pipewire's sockets.
+- Remove numpy and sounddevice dependencies by wrapping libpipewire-0.3 and using it directly.
+    - I'm actively working on it.
 - Add support for a sys-audio configuration (flexible support).
 - Add logs.
 - Create documentation and specification.
